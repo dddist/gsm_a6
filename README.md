@@ -5,9 +5,9 @@ This library for Arduino to use Ai-Thinker A6 modules. This library tested on Th
 This library use SoftwareSerial library. So please dont forget this library's limits. Dont use this library on Arduino's hardware serial ports 0 and 1!
 
 ### Connection & Pinouts
-ESP8266 |   Sim800L   |    Notes  
+ESP8266 |   A6      |    Notes  
 -------------|-------------|------------
-+5v| (3.8v)~(4.4v)!| Power supply input
++3.3v| +5.0v!| Power supply input
 4 RX_PIN | TX |  
 5 TX_PIN | RX |
 2   RESET_PIN | RST| Reset Pin(if need)
