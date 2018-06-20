@@ -1,24 +1,6 @@
-/*
-	GSMSim Library
-
-	This library written for SIMCOM Sim800L module. Library may worked on any SIMCOM modules
-	and GSM Shields.
-
-	Created 11.05.2017
-	By Erdem ARSLAN
-	Modified 30.08.2017
-
-	Erdem ARSLAN
-	Science and Technology Teacher, an Arduino Lover =)
-	erdemsaid@gmail.com
-	https://www.erdemarslan.com/
-	http://www.robothane.net/
-	http://www.eralabs.net/
-
-*/
 
 #include "Arduino.h"
-#include "GSMSim.h"
+#include "gsm_a6.h"
 #include <SoftwareSerial.h>
 
 GSMSim::GSMSim(void) : SoftwareSerial(DEFAULT_RX_PIN, DEFAULT_TX_PIN)
