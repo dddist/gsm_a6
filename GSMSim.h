@@ -1,23 +1,3 @@
-/*
-	GSMSim Library
-
-	This library written for SIMCOM Sim800L module. Library may worked on any SIMCOM modules
-	and GSM Shields.
-
-	Created 11.05.2017
-	By Erdem ARSLAN
-	Modified 25.08.2017
-
-	Erdem ARSLAN
-	Science and Technology Teacher, an Arduino Lover =)
-	erdemsaid@gmail.com
-	https://www.erdemarslan.com/
-	http://www.robothane.net/
-	http://www.eralabs.net/
-
-*/
-
-
 #ifndef GSMSim_h
 #define GSMSim_h
 #include <SoftwareSerial.h>
@@ -134,9 +114,6 @@ class GSMSim : public SoftwareSerial
 		String moduleDebug();
 
 
-
-
-
 		// Arama Fonksiyonları
 		// arama yapar
 		bool call(char* phone_number);
@@ -195,50 +172,7 @@ class GSMSim : public SoftwareSerial
 		bool ussdSend(char* code);
 		// Raw datadan cevabı okur!
 		String ussdRead(String serialRaw);
-
-		// Radyo Kodları
-		bool fmOpen();
-		bool fmOpen(bool mainChannel);
-		bool fmOpen(bool mainChannel, uint8_t freq);
-		bool fmIsOpened();
-		bool fmClose();
-		uint8_t fmGetFreq();
-		bool fmSetFreq(uint8_t freq);
-		uint8_t fmGetVolume();
-		bool fmSetVolume(uint8_t volume);
-
-		// GPRS Kodları
-		// Connect to Bearer
-		bool gprsConnectBearer();
-		//String gprsConnectBearerT();
-		bool gprsConnectBearer(String apn);
-		bool gprsConnectBearer(String apn, String user, String password);
-
-		// Check connection
-		bool gprsIsConnected();
-		// get ip address
-		String gprsGetIP();
-		// close gprs bearer connection
-		bool gprsCloseConn();
-		String gprsHTTPGet(String url);
-		String gprsHTTPGet(String url, bool read);
-
-
-		// NTP Komutları
-		bool timeSetServer(int timezone);
-		bool timeSetServer(int timezone, String server);
-		String timeSyncFromServer();
-		String timeGetRaw();
-		void timeGet(int *day, int *month, int *year, int *hour, int *minute, int *second);
-
-		// Email Komutları
-		bool emailSMTPConf(String server, String port, bool useSSL);
-		bool emailSMTPAuth(String username, String password);
-		bool emailSMTPAuth(String username, String password, bool requireAuth);
-		bool emailSMTPGmail(String username, String password);
-		String emailSMTPWrite(String from, String to, String title, String message);
-		String emailSMTPWrite(String from, String to, String title, String message, String fromName, String toName);
-		String emailSMTPSend();
+	
 
 };
 
